@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -18,10 +19,11 @@ public class DeleteUserServlet extends HttpServlet {
 	private transient Connection conn;
 
 	@Override
-	public void init() {
+	public void init(ServletConfig sc) {
+		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/jdbc", "root", "sql@8");
+			conn = DriverManager.getConnection(sc.getInitParameter("dbUrl"),sc.getInitParameter("dbUser"),sc.getInitParameter("dbPass"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -37,7 +39,7 @@ public class DeleteUserServlet extends HttpServlet {
 			int result = st
 					.executeUpdate("delete from user where uName='" + uName + "' and password = '" + password + "'");
 			if (result > 0) {
-				out.print("User Deletion Succesfull <br>");
+				out.print("User Deletion Successful <br>");
 				out.print("If you want to register again <br>");
 				out.print("<a href='Registration.html'>Register Here</a>");
 			} else {
