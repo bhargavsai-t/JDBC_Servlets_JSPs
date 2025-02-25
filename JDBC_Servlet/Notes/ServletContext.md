@@ -22,7 +22,7 @@
 
 1. They are name:value pairs of textual information that are supplied through the `web.xml` for our web application. They are very similar to init params.
 2. The major difference between these and init params are, init params are for particular servlet and these are application level.
-3. In the `web.xml` we use element `<contex-param></context-param>` not under servlet tag but it is a global tag. We can create any number of context params in `web.xml` file. All these params are read by the container when the application is deployed.
+3. In the `web.xml` we use element `<context-param></context-param>` not under servlet tag but it is a global tag. We can create any number of context params in `web.xml` file. All these params are read by the container when the application is deployed.
 4. We can access these params in our servlet by using `getServletContext().getInitParameter()`.
 5. We can also access these params in JSP by using `application.getInitParameter()`.
 

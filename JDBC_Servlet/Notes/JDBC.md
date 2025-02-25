@@ -12,7 +12,7 @@
 
 1. Oracle provides two things; API and Specification. We as developers we learn API and use it in our application. But we don't know how it is implemented. That is the responsibility of Oracle. Oracle implements the API and provides the implementation as a JAR file. This JAR file is called as Driver.
 2. It is a part of `java.sql.*` package. It contains interfaces and classes for JDBC API.
-3. API is comprised of several interfaces and classes like connection statement, resultset and many more.
+3. API is comprised of several interfaces and classes like connection statement, result set and many more.
 
 ## JDBC Driver
 
