@@ -4,7 +4,7 @@
 
 1. It is the key interface to execute the DML and DQL statements from our jdbc client application.
 2. We can create a statement object by calling the `Connection.createStatement();`.
-3. Once we have a connection we will invoke the create statement method on it which will return as a statement from that point of time. 
+3. Once we have a connection we will invoke the create statement method on it which will return as a statement from that point of time.
    `Statement stmt = conn.CreateStatement();`.
 4. There are to important methods in statement.
    1. `stmt.executeUpdate()`: It will take an sql DML statement that will insert, update, or delete against the database.
@@ -23,4 +23,3 @@
 1. There are almost 17 methods in ResultSet interface out of which are frequently used and important methods.
    - `rs.next();`: This points the cursor to next available record. It returns true value when there is a record and false when is not.
    - `rs.getXXX();`: These methods are used to retrieve data from the database when a record is found. Instead of xxx we use data types of record like int, String, and others.
-

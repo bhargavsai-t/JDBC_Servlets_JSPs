@@ -14,4 +14,3 @@
 12. The get method is faster than post method.
 13. Finally get is idempotent it means we can use get method any number of times and it does not affect the state of the application.
 14. But post is not idempotent as we use post for adding, updating, or deleting the data. So if we execute the post method it will affect the state of application.
-15. 
