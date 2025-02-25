@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -20,10 +21,10 @@ public class BloomRegisterServlet extends HttpServlet {
 
 	@Override
 	public void init() throws ServletException {
-
+			ServletContext sc = getServletContext();
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/jdbc", "root", "sql@8");
+			conn = DriverManager.getConnection(sc.getInitParameter("dbUrl"),sc.getInitParameter("dbUser"),sc.getInitParameter("dbPass"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
