@@ -6,8 +6,11 @@
 4. The data that we put in servlet context will be applicable through out the application, so any servlet, or JSP with in our application can access the servlet context and get data which is put by any other servlet or jsp or put the data which can be accessed by any servlet or jsp.
 5. Scope of servlet context is throughout the application.
 <<<<<<< HEAD
+<<<<<<< HEAD
 6. During the initialization phase of a servlet the container injects the servlet context object by creating it into the servlet and once injected we can retrieve it in different ways with in a servlet for a unique method that takes a
 =======
+=======
+>>>>>>> da323f66279d16bfe93e5bdc8d8f36aba6ed34c7
 6. During the initialization phase of a servlet the container injects the servlet context object by creating it into the servlet and once injected we can retrieve it in different ways with in a servlet for a unique method that is overloaded init method that takes a `ServletConfig config` object which has a method `config.getServletContext()` from which you can retrieve the servlet context.
 7. For `init()` that doesn't take any methods we simply use `ServletContext context = getServletContext()`.
 
@@ -32,4 +35,7 @@
 <param-value></para-value>
 </context-param>
 ```
+<<<<<<< HEAD
 >>>>>>> da20996 (Updated ServletContext.md)
+=======
+>>>>>>> da323f66279d16bfe93e5bdc8d8f36aba6ed34c7
