@@ -1,6 +1,6 @@
 # Session Management
 
-## Http as stateless server
+## Http as a stateless server
 
 1. Http is a stateless server.
 2. Each request is independent of the previous one.
@@ -69,7 +69,8 @@
    ```
 
 We get array of cookies back. then we use `cookies[i].getName();` to retrieve the name of the cookie and `cookies[i].getValue();` to get the value of the cookie. 9. URL rewriting is only helpful when cookies are being disabled in the clients web browser for some reason. It only works with url's not form fields. We append to the url.
-`Java
+
+```Java
     String url = "targetServlet?sessionId=123";
     response.getWriter().print("<a href='"+url"'>Click Here</a>");
-    `
+```
