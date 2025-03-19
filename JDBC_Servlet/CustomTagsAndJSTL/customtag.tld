@@ -1,0 +1,12 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<taglib>
+<tlib-version>2.0</tlib-version>
+<jspversion>2.0</jspversion>
+<shortname>userinformation</shortname><info>This displays user information</info>
+<uri>http://srirama.com</uri>
+<tag>
+<name>displayUser</name>
+<tag-class>taghandler.TagHandler</tag-class>
+<info>Displays User Information</info>
+</tag>
+</taglib>
