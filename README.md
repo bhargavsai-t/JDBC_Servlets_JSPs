@@ -21,3 +21,5 @@
 17. Java Server Pages
 18. MVC
 19. Custom Tags and JSTL.
+20. Web Security
+21. Connection Pooling
